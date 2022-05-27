@@ -1,28 +1,28 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
+	name: "Tiered Tree",
+	id: "tieredtree",
+	author: "canoeable",
 	pointsName: "points",
-	modFiles: ["layers.js", "tree.js"],
+	modFiles: ["layers/tiers.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 0,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "0.1a",
+	name: "First Tiers",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
+<h4>v0.1a</h4><br>
+First 2 tiers added.
+Endgame: 5 T2 Prestiges.`
 
-let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
+let winText = `Congratulations! You have reached the end and beaten this game, well.. for now...`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
@@ -43,6 +43,8 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	gain = gain.mul(buyableEffect('t', 15))
+	if (gain.lte(1)) gain = new Decimal(1)
 	return gain
 }
 
@@ -51,12 +53,12 @@ function addedPlayerData() { return {
 }}
 
 // Display extra things at the top of the page
-var displayThings = [
+var displayThings = [ function() {}
 ]
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return false
 }
 
 
@@ -76,4 +78,34 @@ function maxTickLength() {
 // Use this if you need to undo inflation from an older version. If the version is older than the version that fixed the issue,
 // you can cap their current resources with this.
 function fixOldSave(oldVersion){
+}
+
+function buyMaxBuyable(base, growth) {
+	let max = Decimal.affordGeometricSeries(player[this.layer].points, base, growth, getBuyableAmount(this.layer, this.id))
+	let cost = Decimal.sumGeometricSeries(max, base, growth, getBuyableAmount(this.layer, this.id))
+	player[this.layer].points = player[this.layer].points.sub(cost)
+	setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(max))
+}
+
+let dev = {
+	isEnabled: false
+}
+
+function calcGain(tier) {
+	act = tier*10
+	return buyableEffect('t', act+1).add(buyableEffect('t', act+2)).add(buyableEffect('t', act+3)).add(buyableEffect('t', act+4))
+}
+
+function calcGainFormat(tier) {
+	act = tier*10
+	amt = buyableEffect('t', act+1).add(buyableEffect('t', act+2)).add(buyableEffect('t', act+3)).add(buyableEffect('t', act+4))
+	return format(amt)
+}
+
+function resetBuyableAmt(tier) {
+	act = tier*10
+	setBuyableAmount('t', act+1, new Decimal(0))
+	setBuyableAmount('t', act+2, new Decimal(0))
+	setBuyableAmount('t', act+3, new Decimal(0))
+	setBuyableAmount('t', act+4, new Decimal(0))
 }
