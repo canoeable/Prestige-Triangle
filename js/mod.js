@@ -1,9 +1,9 @@
 let modInfo = {
-	name: "Tiered Tree",
-	id: "tieredtree",
+	name: "Prestige Triangle",
+	id: "trianglefunny",
 	author: "canoeable",
 	pointsName: "points",
-	modFiles: ["layers/tiers.js", "tree.js"],
+	modFiles: ["layers/tiers.js", "layers/levels.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
@@ -13,13 +13,15 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.1a",
-	name: "First Tiers",
+	num: "v0.11 (upd 2)",
+	name: "Scrap this, with the scrap layer!",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
+<h4>v0.11 (upd 2)</h4><br>
+Added T3, and the scrap layer.<br>
 <h4>v0.1a</h4><br>
-First 2 tiers added.
+First 2 tiers added.<br>
 Endgame: 5 T2 Prestiges.`
 
 let winText = `Congratulations! You have reached the end and beaten this game, well.. for now...`

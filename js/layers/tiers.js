@@ -1,7 +1,7 @@
 addLayer("t", {
-    name: "tier", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "T", // This appears on the layer's node. Default is the id with the first letter capitalized
-    position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
+    name: "tier", 
+    symbol: "T", 
+    position: 0, 
     startData() { return {
         unlocked: true,
 		points: new Decimal(0),
@@ -14,20 +14,20 @@ addLayer("t", {
     t2 buyables
     */
     color: "#59ab78",
-    requires() { return new Decimal(10) }, // Can be a function that takes requirement increases into account
-    resource: "tier points", // Name of prestige currency
-    baseResource: "points", // Name of resource prestige is based on
-    baseAmount() {return player.points}, // Get the current amount of baseResource
-    type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
-    exponent: 0.5, // Prestige currency exponent
-    gainMult() { // Calculate the multiplier for main currency from bonuses
+    requires() { return new Decimal(10) },
+    resource: "tier points",
+    baseResource: "points", 
+    baseAmount() {return player.points},
+    type: "normal",
+    exponent: 0.5,
+    gainMult() {
         mult = new Decimal(1)
         return mult
     },
-    gainExp() { // Calculate the exponent on main currency from bonuses
+    gainExp() {
         return new Decimal(1)
     },
-    row: 0, // Row the layer is in on the tree (0 is the first row)
+    row: 0,
     hotkeys: [
         {key: "t", description: "t: Reset for tier points.", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
@@ -302,4 +302,4 @@ addLayer("t", {
         if (calcGain(3).gte(1)) player.t.bonus.tier1 = player.t.bonus.tier1.add(calcGain(3).div(10).mul(buyableEffect(this.layer, 25)).div(20))
     }
 })
-//.mul(buyableEffect('t', 45))
+//.mul(buyableEffect('l', 15))
