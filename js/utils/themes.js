@@ -1,5 +1,5 @@
 // ************ Themes ************
-var themes = ["default", "aqua", "red", "purple"]
+var themes = ["default", "red", "orange", "light green", "dark green", "dark blue", "purple"]
 
 var colors = {
 	default: {
@@ -12,7 +12,7 @@ var colors = {
 		background: "#0f0f0f",
 		background_tooltip: "rgba(0, 0, 0, 0.75)",
 	},
-	aqua: {
+	"dark blue": {
 		1: "#bfdfff",
 		2: "#8fa7bf",
 		3: "#5f6f7f",
@@ -40,6 +40,36 @@ var colors = {
 		points: "#9d78bf", //change
 		locked: "#2f0457",
 		background: "#2f0457",
+		background_tooltip: "rgba(0, 15, 31, 0.75)",
+	},
+	orange: {
+		1: "#8a3601",
+		2: "#8a3601",
+		3: "#8a3601",
+		color: "#bfdfff", 
+		points: "#bd8d6f", //change
+		locked: "#8a3601",
+		background: "#8a3601",
+		background_tooltip: "rgba(0, 15, 31, 0.75)",
+	},
+	"light green": {
+		1: "#55ba30",
+		2: "#55ba30",
+		3: "#55ba30",
+		color: "#bfdfff", 
+		points: "#185901", //change
+		locked: "#55ba30",
+		background: "#55ba30",
+		background_tooltip: "rgba(0, 15, 31, 0.75)",
+	},
+	"dark green": {
+		1: "#185901",
+		2: "#185901",
+		3: "#185901",
+		color: "#bfdfff", 
+		points: "#55ba30", //change
+		locked: "#185901",
+		background: "#185901",
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 }
