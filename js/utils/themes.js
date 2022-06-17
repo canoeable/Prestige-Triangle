@@ -4,9 +4,9 @@ var themes = ["default", "light red", "red", "dark red", "dark orange", "orange"
 
 var colors = {
 	default: {
-		1: "#ffffff",//Branch color 1
-		2: "#bfbfbf",//Branch color 2
-		3: "#7f7f7f",//Branch color 3
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#dfdfdf",
 		points: "#ffffff",
 		locked: "#bf8f8f",
@@ -14,9 +14,9 @@ var colors = {
 		background_tooltip: "rgba(0, 0, 0, 0.75)",
 	},
 	"light red": {
-		1: "#d93636",
-		2: "#d93636",
-		3: "#d93636",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#4d0505", //change
 		locked: "#d93636",
@@ -24,9 +24,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"red": {
-		1: "#b00c0c",
-		2: "#b00c0c",
-		3: "#b00c0c",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#4d0505", //change
 		locked: "#b00c0c",
@@ -34,9 +34,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"dark red": {
-		1: "#4d0505",
-		2: "#4d0505",
-		3: "#4d0505",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#c93838", //change
 		locked: "#4d0505",
@@ -44,9 +44,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"dark orange": {
-		1: "#3d1b06",
-		2: "#3d1b06",
-		3: "#3d1b06",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#bd8d6f", //change
 		locked: "#3d1b06",
@@ -54,9 +54,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"orange": {
-		1: "#8a3601",
-		2: "#8a3601",
-		3: "#8a3601",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#3d1b06", //change
 		locked: "#8a3601",
@@ -64,9 +64,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"light orange": {
-		1: "#c46021",
-		2: "#c46021",
-		3: "#c46021",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#3d1b06", //change
 		locked: "#c46021",
@@ -74,9 +74,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"light yellow": {
-		1: "#e3dc12",
-		2: "#e3dc12",
-		3: "#e3dc12",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#636002", //change
 		locked: "#e3dc12",
@@ -84,9 +84,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"yellow": {
-		1: "#9c9705",
-		2: "#9c9705",
-		3: "#9c9705",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#636002", //change
 		locked: "#9c9705",
@@ -94,9 +94,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"dark yellow": {
-		1: "#636002",
-		2: "#636002",
-		3: "#636002",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#e3dc12", //change
 		locked: "#636002",
@@ -104,9 +104,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"dark green": {
-		1: "#185901",
-		2: "#185901",
-		3: "#185901",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#55ba30", //change
 		locked: "#185901",
@@ -114,9 +114,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"green": {
-		1: "#228200",
-		2: "#228200",
-		3: "#228200",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#185901", //change
 		locked: "#228200",
@@ -124,9 +124,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"light green": {
-		1: "#55ba30",
-		2: "#55ba30",
-		3: "#55ba30",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#185901", //change
 		locked: "#55ba30",
@@ -134,9 +134,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"light blue": {
-		1: "#026ede",
-		2: "#026ede",
-		3: "#026ede",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#001f3f",
 		locked: "#026ede",
@@ -144,9 +144,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"blue": {
-		1: "#01468c",
-		2: "#01468c",
-		3: "#01468c",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#001f3f",
 		locked: "#01468c",
@@ -154,9 +154,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"dark blue": {
-		1: "#001f3f",
-		2: "#001f3f",
-		3: "#001f3f",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#026ede",
 		locked: "#001f3f",
@@ -164,9 +164,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"dark purple": {
-		1: "#17004d",
-		2: "#17004d",
-		3: "#17004d",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#5e19ff",
 		locked: "#17004d",
@@ -174,9 +174,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"purple": {
-		1: "#2f0457",
-		2: "#2f0457",
-		3: "#2f0457",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff", 
 		points: "#17004d", //change
 		locked: "#2f0457",
@@ -184,9 +184,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"light purple": {
-		1: "#5e19ff",
-		2: "#5e19ff",
-		3: "#5e19ff",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#17004d",
 		locked: "#5e19ff",
@@ -194,9 +194,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"light pink": {
-		1: "#fa14f6",
-		2: "#fa14f6",
-		3: "#fa14f6",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#4d004b",
 		locked: "#fa14f6",
@@ -204,9 +204,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"pink": {
-		1: "#8c008a",
-		2: "#8c008a",
-		3: "#8c008a",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#4d004b",
 		locked: "#8c008a",
@@ -214,9 +214,9 @@ var colors = {
 		background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 	"dark pink": {
-		1: "#4d004b",
-		2: "#4d004b",
-		3: "#4d004b",
+		1: "#ffffff",
+		2: "#bfbfbf",
+		3: "#7f7f7f",
 		color: "#bfdfff",
 		points: "#fa14f6",
 		locked: "#4d004b",

@@ -3,7 +3,7 @@ let modInfo = {
 	id: "trianglefunny",
 	author: "canoeable",
 	pointsName: "points",
-	modFiles: ["layers/tiers.js", "layers/levels.js", "tree.js"],
+	modFiles: ["layers/tiers.js", "layers/scraps.js", "layers/prestige.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
@@ -18,9 +18,7 @@ let VERSION = {
 }
 
 let changelog = `<h1>Changelog:</h1><br>
-<h4>v0.11 (upd 2)</h4><br>
-Added T3, and the scrap layer.<br>
-<h4>v0.1a</h4><br>
+<h4>v0.2</h4><br>
 First 2 tiers added.<br>
 Endgame: 5 T2 Prestiges.`
 
@@ -46,6 +44,8 @@ function getPointGen() {
 
 	let gain = new Decimal(1)
 	gain = gain.mul(buyableEffect('t', 15))
+	if(hasUpgrade('s', 31)) gain = gain.mul(player.s.effects.e31b)
+	if(hasUpgrade('s', 33)) gain = gain.mul(upgradeEffect('s', 33))
 	if (gain.lte(1)) gain = new Decimal(1)
 	return gain
 }
@@ -60,7 +60,7 @@ var displayThings = [ function() {}
 
 // Determines when the game "ends"
 function isEndgame() {
-	return false
+	return player.p.points.gte(5)
 }
 
 
@@ -110,4 +110,23 @@ function resetBuyableAmt(tier) {
 	setBuyableAmount('t', act+2, new Decimal(0))
 	setBuyableAmount('t', act+3, new Decimal(0))
 	setBuyableAmount('t', act+4, new Decimal(0))
+}
+
+function calcKnowledge() {
+	knowl = player.s.total.pow(2)
+	if (hasUpgrade('s', 24)) knowl = knowl.add(upgradeEffect('s', 24))
+	if (hasUpgrade('s', 25)) knowl = knowl.pow(upgradeEffect('s', 25))
+	if (hasUpgrade('s', 21)) knowl = knowl.mul(upgradeEffect('s', 21))
+	if (hasUpgrade('s', 22)) knowl = knowl.mul(upgradeEffect('s', 22))
+	if (hasUpgrade('s', 23)) knowl = knowl.mul(upgradeEffect('s', 23))
+	if (player.s.best.eq(0)) knowl = new Decimal(0)
+	return knowl
+}
+
+function calcBots(tier) {
+	botgen = new Decimal(0)
+	if(tier===1)botgen = botgen.add(buyableEffect('s', 11))
+	if(tier===2)botgen = botgen.add(buyableEffect('s', 13))
+	if(tier===3)botgen = botgen.add(buyableEffect('s', 15))
+	return botgen
 }
